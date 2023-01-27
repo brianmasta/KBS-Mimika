@@ -85,10 +85,9 @@
 						</ul>
 					</li>
                     <li class="pc-item pc-hasmenu">
-						<a href="#!" class="pc-link "><span class="pc-micon"><i data-feather="box"></i></span><span class="pc-mtext">Template Surat</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+						<a href="#!" class="pc-link "><span class="pc-micon"><i data-feather="box"></i></span><span class="pc-mtext">Pengumuman</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 						<ul class="pc-submenu">
-							<li class="pc-item"><a class="pc-link" href="">Data KK</a></li>
-							<li class="pc-item"><a class="pc-link" href="">Input KK</a></li>
+							<li class="pc-item"><a class="pc-link" href="/data-ibadah">Jadwal Ibadah</a></li>
 						</ul>
 					</li>
 				</ul>

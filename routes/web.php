@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\IbadahController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\KeluargaController;
 
@@ -17,9 +19,11 @@ use App\Http\Controllers\KeluargaController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'Authenticating'])->middleware('guest');
@@ -41,3 +45,12 @@ Route::get('/edit-anggota/{id}', [KeluargaController::class, 'edit_anggota'])->m
 Route::put('/update-anggota/{id}', [KeluargaController::class, 'update_anggota'])->middleware('auth');
 Route::get('/delete-anggota/{id}', [KeluargaController::class, 'delete_anggota'])->middleware('auth');
 Route::delete('/destroy-anggota/{id}', [KeluargaController::class, 'destroy_anggota'])->middleware('auth');
+
+// Jadwal Ibadah
+Route::get('/data-ibadah', [IbadahController::class, 'data'])->middleware('auth');
+Route::get('/input-ibadah', [IbadahController::class, 'input'])->middleware('auth');
+Route::post('/ibadah-add', [IbadahController::class, 'create_ibadah'])->middleware('auth');
+Route::get('/edit-ibadah/{id}', [IbadahController::class, 'edit_ibadah'])->middleware('auth');
+Route::put('/update-ibadah/{id}', [IbadahController::class, 'update_ibadah'])->middleware('auth');
+Route::get('/delete-ibadah/{id}', [IbadahController::class, 'delete_ibadah'])->middleware('auth');
+Route::delete('/destroy-ibadah/{id}', [IbadahController::class, 'destroy_ibadah'])->middleware('auth');
