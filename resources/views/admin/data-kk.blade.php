@@ -24,7 +24,8 @@
                                 <th>No</th>
                                 <th>Kepala Keluarga</th>
                                 <th>Alamat</th>
-                                <th>No Telpon</th>
+                                <th>Rayon</th>
+                                <th>Asal Jemaat</th>
                                 <th>Opsi</th>
                             </tr>
                         </thead>
@@ -34,7 +35,8 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->alamat}}</td>
-                                <td>{{$item->hp}}</td>
+                                <td>{{$item->Rayon->name}}</td>
+                                <td>{{$item->asal_jemaat}}</td>
                                 <td>
                                     <div class="btn-group-sm">
                                         {{-- <button type="button" class="btn btn-primary btn-sm">Detail</button> --}}

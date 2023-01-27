@@ -258,72 +258,75 @@
           </div>
           <div class="col-md-8 pt-4" data-aos="fade-up">
             <h3>JADWAL IBADAH KBS MIMIKA - 2022</h3>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Hari/Tanggal</th>
-                  <th>Keluarga dikunjungi</th>
-                  <th>Alamat</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Minggu, 27 Maret 2022</td>
-                  <td>Kel. Berthi Uniwali</td>
-                  <td>Kompleks Biak Gorong-Gorong</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Minggu, 24 April 2022</td>
-                  <td>Kel. David Yawan</td>
-                  <td>Samping GKI Amungsa Timika indah</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Minggu, 29 Mei 2022</td>
-                  <td>Kel. Roby Awak</td>
-                  <td>Belakang SMAN I Sempan</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Minggu, 26 Juni 2022</td>
-                  <td>Kel. Yanus Marandof</td>
-                  <td>Jln. Patimura Ujung</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Minggu, 31 Juli 2022</td>
-                  <td>Kel. Ridson Yawan</td>
-                  <td>Lorong masuk GKI Diaspora SP2</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Minggu, 28 Agustus 2022</td>
-                  <td>Kel. John Yarangga</td>
-                  <td>Jln. Hasanudin lorong masuk grapari</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Minggu, 25 September 2022</td>
-                  <td>Kel. John Yarangga</td>
-                  <td>Jln. Hasanudin lorong masuk grapari</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Minggu, 30 Oktober 2022</td>
-                  <td>Kel. Yan Ch marandof</td>
-                  <td>Jln. Mapurujaya SP4</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>Minggu, 27 November 2022</td>
-                  <td>Kel. Mansnembra/Yawan</td>
-                  <td>Samping GKI Maranatha SP3</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Hari/Tanggal</th>
+                    <th>Keluarga dikunjungi</th>
+                    <th>Alamat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Minggu, 27 Maret 2022</td>
+                    <td>Kel. Berthi Uniwali</td>
+                    <td>Kompleks Biak Gorong-Gorong</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Minggu, 24 April 2022</td>
+                    <td>Kel. David Yawan</td>
+                    <td>Samping GKI Amungsa Timika indah</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Minggu, 29 Mei 2022</td>
+                    <td>Kel. Roby Awak</td>
+                    <td>Belakang SMAN I Sempan</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Minggu, 26 Juni 2022</td>
+                    <td>Kel. Yanus Marandof</td>
+                    <td>Jln. Patimura Ujung</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Minggu, 31 Juli 2022</td>
+                    <td>Kel. Ridson Yawan</td>
+                    <td>Lorong masuk GKI Diaspora SP2</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Minggu, 28 Agustus 2022</td>
+                    <td>Kel. John Yarangga</td>
+                    <td>Jln. Hasanudin lorong masuk grapari</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Minggu, 25 September 2022</td>
+                    <td>Kel. John Yarangga</td>
+                    <td>Jln. Hasanudin lorong masuk grapari</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Minggu, 30 Oktober 2022</td>
+                    <td>Kel. Yan Ch marandof</td>
+                    <td>Jln. Mapurujaya SP4</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Minggu, 27 November 2022</td>
+                    <td>Kel. Mansnembra/Yawan</td>
+                    <td>Samping GKI Maranatha SP3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
           </div>
         </div>
 

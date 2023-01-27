@@ -26,6 +26,11 @@
                                     <small id="emailHelp" class="form-text text-muted">Alamat di Timika.</small>
                                 </div>
                                 <div class="form-group">
+                                    <label for="asal_jemaat">Asal Jemaat</label>
+                                    <input value="{{ $keluarga->asal_jemaat }}" name="asal_jemaat" type="text" class="form-control" id="asal_jemaat" placeholder="Asal Jemaat" required>
+                                    <small id="emailHelp" class="form-text text-muted">Jemaat Asal Biak.</small>
+                                </div>
+                                <div class="form-group">
                                     <label for="alamat">Rayon</label>
                                     <select name="rayon_id" class="mb-3 form-control" required>
                                         <option value="{{ $keluarga->rayon->id }}">{{ $keluarga->rayon->name }}</option>

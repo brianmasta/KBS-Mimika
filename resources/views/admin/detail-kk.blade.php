@@ -23,6 +23,10 @@
                                         <td>: {{$anggota->hp}}</td>
                                     </tr>
                                     <tr>
+                                        <th>Asal Jemaat</th>
+                                        <td>: {{$anggota->asal_jemaat}}</td>
+                                    </tr>
+                                    <tr>
                                         <th>Rayon</th>
                                         <td>: {{$anggota->rayon->name}}</td>
                                     </tr>
@@ -59,11 +63,14 @@
                                         <th>Kode Pos</th>
                                         <td>: {{$anggota->pos}}</td>
                                     </tr>
+                                    <tr>
+                                        <th><a class="btn btn-danger btn-sm" href="/data-kk">Kembali</a></th>
+                                    </tr>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-danger btn-sm" href="/data-kk">Kembali</a>
+                    
                     <hr>
                     <a class="btn btn-success btn-sm" href="/input-anggota/{{$anggota->id}}">Tambah Anggota</a>
                     <br>

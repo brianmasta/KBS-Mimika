@@ -13,18 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('keluargas', function (Blueprint $table) {
+        Schema::create('asal_jemaats', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('name',100);
-            $table->string('alamat',100);
-            $table->bigInteger('rayon_id')->unsigned();
-            $table->string('provinsi',100);
-            $table->string('kabupaten',100);
-            $table->string('distrik',100,null);
-            $table->string('kelurahan',100,null);
-            $table->string('rt', 100);
-            $table->string('pos',20,null);
-            $table->string('hp',20,null);
             $table->timestamps();
         });
     }
@@ -36,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('keluargas');
+        Schema::dropIfExists('asal_jemaats');
     }
 };

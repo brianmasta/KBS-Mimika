@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\KeluargaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,18 +24,20 @@ Route::get('/', function () {
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'Authenticating'])->middleware('guest');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
-
 Route::get('/admin', [AdminController::class, 'index'])->middleware('auth');
-Route::get('/data-kk', [AdminController::class, 'data'])->middleware('auth');
-Route::get('/input-kk', [AdminController::class, 'input'])->middleware('auth');
-Route::post('/keluarga-add', [AdminController::class, 'create_keluarga'])->middleware('auth');
-Route::get('/detail-kk/{id}', [AdminController::class, 'show'])->middleware('auth');
-Route::get('/edit-kk/{id}', [AdminController::class, 'edit_kk'])->middleware('auth');
-Route::get('/input-anggota/{id}', [AdminController::class, 'input_anggota'])->middleware('auth');
-Route::put('/update-keluarga/{id}', [AdminController::class, 'update_keluarga'])->middleware('auth');
 
-Route::post('/anggota-add', [AdminController::class, 'create_anggota'])->middleware('auth');
-Route::get('/edit-anggota/{id}', [AdminController::class, 'edit_anggota'])->middleware('auth');
-Route::put('/update-anggota/{id}', [AdminController::class, 'update_anggota'])->middleware('auth');
-Route::get('/delete-anggota/{id}', [AdminController::class, 'delete_anggota'])->middleware('auth');
-Route::delete('/destroy-anggota/{id}', [AdminController::class, 'destroy_anggota'])->middleware('auth');
+// Kerluarga
+Route::get('/data-kk', [KeluargaController::class, 'data'])->middleware('auth');
+Route::get('/input-kk', [KeluargaController::class, 'input'])->middleware('auth');
+Route::post('/keluarga-add', [KeluargaController::class, 'create_keluarga'])->middleware('auth');
+Route::get('/detail-kk/{id}', [KeluargaController::class, 'show'])->middleware('auth');
+Route::get('/edit-kk/{id}', [KeluargaController::class, 'edit_kk'])->middleware('auth');
+Route::put('/update-keluarga/{id}', [KeluargaController::class, 'update_keluarga'])->middleware('auth');
+
+// Anggota Keluarga
+Route::get('/input-anggota/{id}', [KeluargaController::class, 'input_anggota'])->middleware('auth');
+Route::post('/anggota-add', [KeluargaController::class, 'create_anggota'])->middleware('auth');
+Route::get('/edit-anggota/{id}', [KeluargaController::class, 'edit_anggota'])->middleware('auth');
+Route::put('/update-anggota/{id}', [KeluargaController::class, 'update_anggota'])->middleware('auth');
+Route::get('/delete-anggota/{id}', [KeluargaController::class, 'delete_anggota'])->middleware('auth');
+Route::delete('/destroy-anggota/{id}', [KeluargaController::class, 'destroy_anggota'])->middleware('auth');

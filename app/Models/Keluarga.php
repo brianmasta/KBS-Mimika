@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Uuid;
 use App\Models\Rayon;
 use App\Models\Anggota;
 use Illuminate\Database\Eloquent\Model;
@@ -10,10 +11,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Keluarga extends Model
 {
     use HasFactory;
+    use Uuid;
+
+    protected $table = 'keluargas';
 
     protected $fillable = [
         'name',
         'alamat',
+        'asal_jemaat',
         'rayon_id',
         'provinsi',
         'kabupaten',
@@ -23,7 +28,6 @@ class Keluarga extends Model
         'pos',
         'hp'
     ];
-
 
     public function anggotas()
     {
