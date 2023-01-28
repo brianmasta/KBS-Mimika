@@ -48,6 +48,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#features">Bidang</a></li>
+          <li><a class="nav-link scrollto" href="#details">Jadwal Ibadah</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Galeri</a></li>
           <li><a class="nav-link scrollto" href="#team">Struktural</a></li>
           <li><a class="nav-link scrollto" href="/login">Sistem Informasi</a></li>
@@ -116,7 +117,7 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
+    <!-- ======= Tengtang Section ======= -->
     <section id="about" class="about">
       <div class="container-fluid">
 
@@ -197,7 +198,7 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Features Section ======= -->
+    <!-- ======= Bidang Section ======= -->
     <section id="features" class="features">
       <div class="container">
 
@@ -246,15 +247,15 @@
         </div>
 
       </div>
-    </section><!-- End Features Section -->
+    </section><!-- End Bidang Section -->
 
-    <!-- ======= Details Section ======= -->
+    <!-- ======= Jadwal Ibadah Section ======= -->
     <section id="details" class="details">
       <div class="container">
 
         <div class="row content">
           <div class="col-md-4" data-aos="fade-right">
-            <img src="assets/img/details-1.png" class="img-fluid" alt="">
+            <img src="assets/img/gki.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-4" data-aos="fade-up">
             <h3>JADWAL IBADAH KBS MIMIKA - {{ date("Y"); }}</h3>
@@ -285,7 +286,7 @@
         </div>
 
       </div>
-    </section><!-- End Details Section -->
+    </section><!-- End Jadwal Ibadah Section -->
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
@@ -317,9 +318,9 @@
         </div>
 
       </div>
-    </section><!-- End Gallery Section -->
+    </section><!-- End galeri Section -->
 
-    <!-- ======= Team Section ======= -->
+    <!-- ======= Struktural Section ======= -->
     <section id="team" class="team">
       <div class="container">
 
@@ -493,7 +494,7 @@
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section><!-- End Struktural Section -->
 
 
 
@@ -531,14 +532,14 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>KBS Mimika - Papua</span></strong>. All Rights Reserved
+        &copy; {{ date("Y"); }}Copyright <strong><span>KBS Mimika - Papua</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
-        Web Developer by <a href="">Brian Marandof</a>
+        Web Developer by <a href="https://www.facebook.com/bryan.marandof/">Brian Marandof</a>
       </div>
     </div>
   </footer><!-- End Footer -->
