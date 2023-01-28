@@ -10,45 +10,57 @@
                     <h5>Data Keluarga</h5>
                 </div>
                 <div class="card-body">
+                    <div class="mb-3">
                         <a class="btn btn-success" href="/input-kk">Tambah</a>
-                    <br>
-                    <br>
+                    </div>
+                    <form action="" method="get">
+                        <div class="input-group mb-3">
+                                <input type="text" name="pencarian" class="form-control" placeholder="Pencarian" aria-label="Pencarian" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn  btn-primary">Cari</button>
+                                    <a class="btn  btn-warning" href="/data-kk" type="button">Reset</a>
+                                </div>  
+                        </div>
+                    </form>
                     @if (Session::has('status'))
                     <div class="alert alert-success" role="alert">
                         {{Session::get('message')}}
                     </div>
                     @endif
-                    <table class="table table-resposive table-bordered">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Kepala Keluarga</th>
-                                <th>Alamat</th>
-                                <th>Rayon</th>
-                                <th>Asal Jemaat</th>
-                                <th>Opsi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($keluarga as $item)
-                            <tr>
-                                <td>{{$loop->iteration}}</td>
-                                <td>{{$item->name}}</td>
-                                <td>{{$item->alamat}}</td>
-                                <td>{{$item->Rayon->name}}</td>
-                                <td>{{$item->asal_jemaat}}</td>
-                                <td>
-                                    <div class="btn-group-sm">
-                                        {{-- <button type="button" class="btn btn-primary btn-sm">Detail</button> --}}
-                                        <a class="btn btn-primary btn-sm" href="/detail-kk/{{$item->id}}">Detail</a>
-                                        <a class="btn btn-warning btn-sm" href="/edit-kk/{{$item->id}}">Edit</a>
-                                        <button type="button" class="btn btn-danger btn-sm">Hapus</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Kepala Keluarga</th>
+                                    <th>Alamat</th>
+                                    <th>Rayon</th>
+                                    <th>Asal Jemaat</th>
+                                    <th>Opsi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($keluarga as $item)
+                                <tr>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$item->name}}</td>
+                                    <td>{{$item->alamat}}</td>
+                                    <td>{{$item->Rayon->name}}</td>
+                                    <td>{{$item->asal_jemaat}}</td>
+                                    <td>
+                                        <div class="btn-group-sm">
+                                            {{-- <button type="button" class="btn btn-primary btn-sm">Detail</button> --}}
+                                            <a class="btn btn-primary btn-sm" href="/detail-kk/{{$item->id}}">Detail</a>
+                                            <a class="btn btn-warning btn-sm" href="/edit-kk/{{$item->id}}">Edit</a>
+                                            <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    {{$keluarga->WithQueryString()->links()}}
                 </div>
             </div>
         </div>

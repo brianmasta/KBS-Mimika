@@ -17,7 +17,12 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('name',100);
             $table->string('alamat',100);
+            $table->string('asal_jemaat',100);
+
             $table->bigInteger('rayon_id')->unsigned();
+            $table->foreign('rayon_id')->references('id')->on('rayons')->onUpdate('cascade')
+            ->onDelete('cascade');
+
             $table->string('provinsi',100);
             $table->string('kabupaten',100);
             $table->string('distrik',100,null);

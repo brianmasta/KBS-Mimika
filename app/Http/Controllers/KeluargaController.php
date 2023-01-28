@@ -19,9 +19,16 @@ use Illuminate\Support\Facades\Session;
 
 class KeluargaController extends Controller
 {
-    public function data()
+    public function data(Request $request)
     {
-        $keluarga = Keluarga::all();
+        $pencarian = $request->pencarian;
+        $keluarga = Keluarga::Where('name','LIKE','%'.$pencarian.'%')
+                    ->orWhere('alamat','LIKE','%'.$pencarian.'%')
+                    ->orWhere('asal_jemaat','LIKE','%'.$pencarian.'%')
+                    ->orWhereHas('rayon', function($query) use($pencarian){
+                        $query->where('name','LIKE','%'.$pencarian.'%');
+                    })
+                    ->paginate(15);
         return view('admin.data-kk', ['keluarga' => $keluarga]);
     }
 

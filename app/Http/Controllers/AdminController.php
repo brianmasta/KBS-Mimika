@@ -21,6 +21,19 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.admin');
+        $total_rayon = Keluarga::count();
+        $total_rayon1 = Keluarga::Where('rayon_id', '1')->count();
+        $total_rayon2 = Keluarga::Where('rayon_id', '2')->count();
+        $total_rayon3 = Keluarga::Where('rayon_id', '3')->count();
+        $total_rayon4 = Keluarga::Where('rayon_id', '4')->count();
+        $total_rayon5 = Keluarga::Where('rayon_id', '5')->count();
+        return view('admin.admin',[
+            'total_rayon' => $total_rayon,
+            'total_rayon1' => $total_rayon1,
+            'total_rayon2' => $total_rayon2,
+            'total_rayon3' => $total_rayon3,
+            'total_rayon4' => $total_rayon4,
+            'total_rayon5' => $total_rayon5
+        ]);
     }
 }

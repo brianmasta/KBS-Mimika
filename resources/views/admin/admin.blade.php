@@ -16,7 +16,7 @@
                                     <i class="icon feather icon-users text-primary mb-1 d-block"></i>
                                 </div>
                                 <div class="col-sm-8 text-md-center">
-                                    <h5>50</h5>
+                                    <h5>{{ $total_rayon1 }}</h5>
                                     <span>RAYON 1</span>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@
                                     <i class="icon feather icon-users text-primary mb-1 d-block"></i>
                                 </div>
                                 <div class="col-sm-8 text-md-center">
-                                    <h5>50</h5>
+                                    <h5>{{ $total_rayon2 }}</h5>
                                     <span>RAYON 2</span>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                                     <i class="icon feather icon-users text-primary mb-1 d-block"></i>
                                 </div>
                                 <div class="col-sm-8 text-md-center">
-                                    <h5>600</h5>
+                                    <h5>{{ $total_rayon3 }}</h5>
                                     <span>RAYON 3</span>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                                     <i class="icon feather icon-users text-primary mb-1 d-block"></i>
                                 </div>
                                 <div class="col-sm-8 text-md-center">
-                                    <h5>3550</h5>
+                                    <h5>{{ $total_rayon4 }}</h5>
                                     <span>RAYON 4</span>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                                     <i class="icon feather icon-users text-primary mb-1 d-block"></i>
                                 </div>
                                 <div class="col-sm-8 text-md-center">
-                                    <h5>3550</h5>
+                                    <h5>{{ $total_rayon5 }}</h5>
                                     <span>RAYON 5</span>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                     <i class="icon feather icon-file text-primary mb-1 d-blockz"></i>
                                 </div>
                                 <div class="col-sm-8 text-md-center">
-                                    <h5>200</h5>
+                                    <h5>{{ $total_rayon }}</h5>
                                     <span>TOTAL</span>
                                 </div>
                             </div>
