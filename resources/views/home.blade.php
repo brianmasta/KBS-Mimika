@@ -255,7 +255,9 @@
 
         <div class="row content">
           <div class="col-md-4" data-aos="fade-right">
-            <img src="assets/img/gki.jpg" class="img-fluid" alt="">
+            <img src="assets/img/gki.png" class="img-fluid" alt="">
+            <!--<img src="{{ asset('img/gki.png') }}" class="img-fluid" alt="">-->
+            
           </div>
           <div class="col-md-8 pt-4" data-aos="fade-up">
             <h3>JADWAL IBADAH KBS MIMIKA - {{ date("Y"); }}</h3>
@@ -301,16 +303,16 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              <a href="assets/img/gallery/biak-1.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/biak-1.jpg" alt="" class="img-fluid">
+              <a href="{{ asset('assets/img/gallery/1.jpeg') }}" class="gallery-lightbox">
+                <img src="{{ asset('assets/img/gallery/1.jpeg') }}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-              <a href="assets/img/gallery/biak-2.jpeg" class="gallery-lightbox">
-                <img src="assets/img/gallery/biak-2.jpeg" alt="" class="img-fluid">
+              <a href="{{ asset('assets/img/gallery/2.jpeg') }}" class="gallery-lightbox">
+                <img src="{{ asset('assets/img/gallery/2.jpeg') }}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
