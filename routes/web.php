@@ -37,6 +37,8 @@ Route::post('/keluarga-add', [KeluargaController::class, 'create_keluarga'])->mi
 Route::get('/detail-kk/{id}', [KeluargaController::class, 'show'])->middleware('auth');
 Route::get('/edit-kk/{id}', [KeluargaController::class, 'edit_kk'])->middleware('auth');
 Route::put('/update-keluarga/{id}', [KeluargaController::class, 'update_keluarga'])->middleware('auth');
+Route::get('/delete-keluarga/{id}', [KeluargaController::class, 'delete_keluarga'])->middleware('auth');
+Route::delete('/destroy-keluarga/{id}', [KeluargaController::class, 'destroy_keluarga'])->middleware('auth');
 
 // Anggota Keluarga
 Route::get('/input-anggota/{id}', [KeluargaController::class, 'input_anggota'])->middleware('auth');

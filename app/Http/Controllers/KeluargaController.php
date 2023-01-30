@@ -52,17 +52,34 @@ class KeluargaController extends Controller
 
     public function show($id)
     {
-        // $keluarga = Keluarga::with('anggotas')->get();
-        // // dd($anggota);
-        // return view('admin.detail-kk', ['keluarga' => $keluarga]);
-
         $anggota = Keluarga::with(['anggotas'])->findOrFail($id);
-        // dd($keluarga);
+        
         return view('admin.detail-kk', ['anggota' => $anggota]);
-
-        // return view('admin.detail-kk');
     }
 
+    // DELETE KELUARGA
+    public function delete_keluarga($id)
+    {
+        $keluarga = Keluarga::findOrfail($id);
+
+        return view('admin.keluarga-delete', ['keluarga' => $keluarga]);
+    }
+
+    public function destroy_keluarga($id)
+    {
+        $keluarga = Keluarga::findOrfail($id);
+        $keluarga->delete();
+
+        if($keluarga) {
+            Session::flash('status', 'success');
+            Session::flash('message', 'Data Anggota Berhasil Dihapus!');
+        }
+
+        return redirect('/data-kk');
+    }
+
+
+    // INPUT ANGGOTA
     public function input_anggota($id)
     {
         $keluarga = Keluarga::findOrFail($id);
