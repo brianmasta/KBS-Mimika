@@ -316,6 +316,38 @@
               </a>
             </div>
           </div>
+          
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+              <a href="{{ asset('assets/img/gallery/3 KBS.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('assets/img/gallery/3 KBS.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+              <a href="{{ asset('assets/img/gallery/4 KBS.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('assets/img/gallery/4 KBS.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+              <a href="{{ asset('assets/img/gallery/5 KBS.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('assets/img/gallery/5 KBS.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+              <a href="{{ asset('assets/img/gallery/6 KBS.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('assets/img/gallery/6 KBS.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
 
         </div>
 
