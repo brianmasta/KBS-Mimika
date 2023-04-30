@@ -7,7 +7,7 @@ use App\Models\Tamplatesurat;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
-class TamplatesuratController extends Controller
+class TamplateSuratController extends Controller
 {
     public function data()
     {
