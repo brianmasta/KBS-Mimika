@@ -88,6 +88,7 @@
 						<a href="#!" class="pc-link "><span class="pc-micon"><i data-feather="box"></i></span><span class="pc-mtext">Pengumuman</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 						<ul class="pc-submenu">
 							<li class="pc-item"><a class="pc-link" href="/data-ibadah">Jadwal Ibadah</a></li>
+							<li class="pc-item"><a class="pc-link" href="/data-galeri">Galeri</a></li>
 						</ul>
 					</li>
 				</ul>

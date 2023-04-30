@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\IbadahController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\KeluargaController;
@@ -56,3 +57,11 @@ Route::get('/edit-ibadah/{id}', [IbadahController::class, 'edit_ibadah'])->middl
 Route::put('/update-ibadah/{id}', [IbadahController::class, 'update_ibadah'])->middleware('auth');
 Route::get('/delete-ibadah/{id}', [IbadahController::class, 'delete_ibadah'])->middleware('auth');
 Route::delete('/destroy-ibadah/{id}', [IbadahController::class, 'destroy_ibadah'])->middleware('auth');
+
+Route::get('/data-galeri', [GaleriController::class, 'data'])->middleware('auth');
+Route::get('/input-galeri', [GaleriController::class, 'input'])->middleware('auth');
+Route::post('/galeri-add', [GaleriController::class, 'create_galeri'])->middleware('auth');
+Route::get('/edit-galeri/{id}', [GaleriController::class, 'edit_galeri'])->middleware('auth');
+Route::put('/update-galeri/{id}', [GaleriController::class, 'update_galeri'])->middleware('auth');
+Route::get('/delete-galeri/{id}', [GaleriController::class, 'delete_galeri'])->middleware('auth');
+Route::delete('/destroy-galeri/{id}', [GaleriController::class, 'destroy_galeri'])->middleware('auth');

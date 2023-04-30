@@ -300,16 +300,17 @@
         </div>
 
         <div class="row g-0" data-aos="fade-left">
-
+          @foreach ($galeri as $item)
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              <a href="{{ asset('assets/img/gallery/1.jpeg') }}" class="gallery-lightbox">
-                <img src="{{ asset('assets/img/gallery/1.jpeg') }}" alt="" class="img-fluid">
+              <a href="{{asset('storage/galeri/'.$item->gambar)}}" class="gallery-lightbox">
+                <img src="{{asset('storage/galeri/'.$item->gambar)}}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
+          @endforeach
 
-          <div class="col-lg-3 col-md-4">
+          {{-- <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
               <a href="{{ asset('assets/img/gallery/2.jpeg') }}" class="gallery-lightbox">
                 <img src="{{ asset('assets/img/gallery/2.jpeg') }}" alt="" class="img-fluid">
@@ -347,7 +348,7 @@
                 <img src="{{ asset('assets/img/gallery/6 KBS.jpg') }}" alt="" class="img-fluid">
               </a>
             </div>
-          </div>
+          </div> --}}
 
         </div>
 
