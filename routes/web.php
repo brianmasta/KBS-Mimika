@@ -8,7 +8,7 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\IbadahController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\KeluargaController;
-use App\Http\Controllers\TamplateSuratController;
+use App\Http\Controllers\TamplatesuratController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,8 +67,8 @@ Route::put('/update-galeri/{id}', [GaleriController::class, 'update_galeri'])->m
 Route::get('/delete-galeri/{id}', [GaleriController::class, 'delete_galeri'])->middleware('auth');
 Route::delete('/destroy-galeri/{id}', [GaleriController::class, 'destroy_galeri'])->middleware('auth');
 
-Route::get('/data-tamplate-surat', [TamplateSuratController::class, 'data'])->middleware('auth');
-Route::get('/input-tamplate-surat', [TamplateSuratController::class, 'input'])->middleware('auth');
-Route::post('/tamplate-surat-add', [TamplateSuratController::class, 'create_tamplate_surat'])->middleware('auth');
-Route::get('/delete-tamplate-surat/{id}', [TamplateSuratController::class, 'delete_tamplate_surat'])->middleware('auth');
-Route::delete('/destroy-tamplate-surat/{id}', [TamplateSuratController::class, 'destroy_tamplate_surat'])->middleware('auth');
+Route::get('/data-tamplate-surat', [TamplatesuratController::class, 'data'])->middleware('auth');
+Route::get('/input-tamplate-surat', [TamplatesuratController::class, 'input'])->middleware('auth');
+Route::post('/tamplate-surat-add', [TamplatesuratController::class, 'create_tamplate_surat'])->middleware('auth');
+Route::get('/delete-tamplate-surat/{id}', [TamplatesuratController::class, 'delete_tamplate_surat'])->middleware('auth');
+Route::delete('/destroy-tamplate-surat/{id}', [TamplatesuratController::class, 'destroy_tamplate_surat'])->middleware('auth');

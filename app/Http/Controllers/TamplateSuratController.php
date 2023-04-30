@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\TamplateSurat;
+use App\Models\Tamplatesurat;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
-class TamplateSuratController extends Controller
+class TamplatesuratController extends Controller
 {
     public function data()
     {
-        $TamplateSurat = TamplateSurat::orderBy('judul','asc')->get();
+        $TamplateSurat = Tamplatesurat::orderBy('judul','asc')->get();
         return view('admin.data-tamplateSurat', ['TamplateSurat' => $TamplateSurat]);
     }
 
@@ -29,7 +29,7 @@ class TamplateSuratController extends Controller
         }
 
         $request['file'] = $name;
-        $surat = TamplateSurat::create($request->all());
+        $surat = Tamplatesurat::create($request->all());
 
         if ($surat) {
             Session::flash('status', 'success');
@@ -41,14 +41,14 @@ class TamplateSuratController extends Controller
 
     public function delete_tamplate_surat($id)
     {
-        $surat = TamplateSurat::findOrfail($id);
+        $surat = Tamplatesurat::findOrfail($id);
 
         return view('admin.tamplate-surat-delete', ['surat' => $surat]);
     }
 
     public function destroy_tamplate_surat($id)
     {
-        $surat = TamplateSurat::findOrfail($id);
+        $surat = Tamplatesurat::findOrfail($id);
 
         Storage::disk('public')->delete('tamplate_surat/'.$surat->file);
         $surat->delete();
