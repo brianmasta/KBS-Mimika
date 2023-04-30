@@ -91,6 +91,12 @@
 							<li class="pc-item"><a class="pc-link" href="/data-galeri">Galeri</a></li>
 						</ul>
 					</li>
+					<li class="pc-item pc-hasmenu">
+						<a href="#!" class="pc-link "><span class="pc-micon"><i data-feather="box"></i></span><span class="pc-mtext">Surat</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+						<ul class="pc-submenu">
+							<li class="pc-item"><a class="pc-link" href="/data-tamplate-surat">Tamplate Surat</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
