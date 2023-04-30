@@ -6,7 +6,7 @@ use App\Traits\Uuid;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class TamplateSurat extends Model
+class Tamplatesurat extends Model
 {
     use HasFactory;
     use Uuid;
