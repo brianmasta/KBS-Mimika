@@ -24,6 +24,11 @@ use App\Http\Controllers\TamplatesuratController;
 // Route::get('/', function () {
 //     return view('home');
 // });
+Route::get('/storage-link', function(){
+    $targetForlder = storage_path('app/public');
+    $linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage';
+    symlink($targetForlder,$linkFolder);
+});
 
 Route::get('/', [HomeController::class, 'index']);
 
