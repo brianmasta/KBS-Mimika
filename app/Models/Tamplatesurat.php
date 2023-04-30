@@ -11,7 +11,7 @@ class Tamplatesurat extends Model
     use HasFactory;
     use Uuid;
 
-    protected $table = 'tamplate_Surats';
+    protected $table = 'tamplate_surats';
 
     protected $fillable = [
         'judul',
