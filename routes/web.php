@@ -25,6 +25,12 @@ use App\Http\Controllers\TamplatesuratController;
 //     return view('home');
 // });
 
+Route::get('/storage-link', function(){
+    $targetForlder = storage_path('app/public');
+    $linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage';
+    symlink($targetForlder,$linkFolder);
+});
+
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
