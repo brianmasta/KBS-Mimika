@@ -47,6 +47,7 @@ Route::get('/edit-kk/{id}', [KeluargaController::class, 'edit_kk'])->middleware(
 Route::put('/update-keluarga/{id}', [KeluargaController::class, 'update_keluarga'])->middleware('auth');
 Route::get('/delete-keluarga/{id}', [KeluargaController::class, 'delete_keluarga'])->middleware('auth');
 Route::delete('/destroy-keluarga/{id}', [KeluargaController::class, 'destroy_keluarga'])->middleware('auth');
+Route::get('/cetak-kk-pdf', [KeluargaController::class, 'cetak_data_kk'])->middleware('auth');
 
 // Anggota Keluarga
 Route::get('/input-anggota/{id}', [KeluargaController::class, 'input_anggota'])->middleware('auth');
@@ -55,6 +56,7 @@ Route::get('/edit-anggota/{id}', [KeluargaController::class, 'edit_anggota'])->m
 Route::put('/update-anggota/{id}', [KeluargaController::class, 'update_anggota'])->middleware('auth');
 Route::get('/delete-anggota/{id}', [KeluargaController::class, 'delete_anggota'])->middleware('auth');
 Route::delete('/destroy-anggota/{id}', [KeluargaController::class, 'destroy_anggota'])->middleware('auth');
+
 
 // Jadwal Ibadah
 Route::get('/data-ibadah', [IbadahController::class, 'data'])->middleware('auth');

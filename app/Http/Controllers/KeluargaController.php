@@ -10,12 +10,15 @@ use App\Models\Anngota;
 use App\Models\Kelamin;
 use App\Models\Hubungan;
 use App\Models\Keluarga;
+// use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Pekerjaan;
 use App\Models\Pendidikan;
 use App\Models\Perkawinan;
 use Illuminate\Http\Request;
 use App\Models\Kewarganegaraan;
 use Illuminate\Support\Facades\Session;
+// use Barryvdh\DomPDF\Facade\Pdf;
 
 class KeluargaController extends Controller
 {
@@ -196,5 +199,15 @@ class KeluargaController extends Controller
         }
 
         return redirect('detail-kk/'. $anggota->kk_id);
+    }
+
+    public function cetak_data_kk()
+    {
+        $keluarga = Keluarga::all();
+
+        // $pdf = pdf::loadView('admin.cetak-kk-pdf', ['keluarga' => $keluarga]);
+        // return $pdf->stream('Data_Keluarga_KBS.pdf');
+
+        return View('admin.cetak-kk-pdf', ['keluarga' => $keluarga]);
     }
 }
