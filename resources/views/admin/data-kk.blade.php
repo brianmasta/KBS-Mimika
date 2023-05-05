@@ -12,6 +12,7 @@
                 <div class="card-body">
                     <div class="mb-3">
                         <a class="btn btn-success" href="/input-kk">Tambah</a>
+                        <a class="btn btn-success" href="/cetak-kk-pdf">PDF</a>
                     </div>
                     <form action="" method="get">
                         <div class="input-group mb-3">
