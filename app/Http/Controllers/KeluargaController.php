@@ -203,11 +203,12 @@ class KeluargaController extends Controller
 
     public function cetak_data_kk()
     {
-        $keluarga = Keluarga::all();
+        $keluarga = Keluarga::with('anggotas')->get();
+        // $anggota = Anggota::all();
 
         // $pdf = pdf::loadView('admin.cetak-kk-pdf', ['keluarga' => $keluarga]);
         // return $pdf->stream('Data_Keluarga_KBS.pdf');
-
+        // dd($keluarga);
         return View('admin.cetak-kk-pdf', ['keluarga' => $keluarga]);
     }
 }

@@ -41,9 +41,9 @@
                     
                 </div>
                 <div class="card-body">
-                    <h5>Data Anggota KBS Tahun 2023:</h5>
+                    <h5>DATA WARGA IKATAN KELUARGA BESAR KBS MIMIKA:</h5>
                     <div class="table-responsive">
-                        <table class="table" >
+                        <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -51,6 +51,8 @@
                                     <th>Alamat</th>
                                     <th>Rayon</th>
                                     <th>Asal Jemaat</th>
+                                    <th>No HP</th>
+                                    <th>Jumlah Anggota Keluarga</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,6 +63,15 @@
                                     <td>{{$item->alamat}}</td>
                                     <td>{{$item->Rayon->name}}</td>
                                     <td>{{$item->asal_jemaat}}</td>
+                                    <td>{{$item->hp}}</td>
+                                    <td class="">
+                                        @if ($item->anggotas->count() == 0)
+                                        <p class="text-danger">{{$item->anggotas->count()}}</p>
+                                        @else
+                                        {{$item->anggotas->count()}}
+                                        @endif
+                                        
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

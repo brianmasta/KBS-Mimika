@@ -38,4 +38,5 @@ class Keluarga extends Model
     {
         return $this->belongsTo(Rayon::class);
     }
+
 }
