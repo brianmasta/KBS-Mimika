@@ -16,7 +16,7 @@ use App\Models\Perkawinan;
 use Illuminate\Http\Request;
 use App\Models\Kewarganegaraan;
 use Illuminate\Support\Facades\Session;
-use PDF;
+// use PDF;
 
 class KeluargaController extends Controller
 {

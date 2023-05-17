@@ -38,7 +38,7 @@
     <div class="">
         <div class="col-md-12">           
             <div class="text-uppercase">
-                    <img width="1500px" class="rounded mx-auto d-block" src="{{asset('assets-admin/images/Cop KK KBS2.png')}}" alt="Card image cap">
+                    <img width="1200px" class="rounded mx-auto d-block" src="{{asset('assets-admin/images/Cop KK KBS2.png')}}" alt="Card image cap">
                     <hr>
                 <div class="">
                     <div class="table">
@@ -157,7 +157,7 @@
                                     <td>{{$anggota->created_at}}</td>
                                     <td><u>{{$anggota->name}}</u></td>
                                     <td>
-                                        <div class="col-md-4 container">{!! DNS2D::getBarcodeHTML("$anggota->id", 'QRCODE',6,6) !!}</div>
+                                        <div class="col-md-6 container">{!! DNS2D::getBarcodeHTML("$anggota->id", 'QRCODE',6,6) !!}</div>
                                         <strong><u>Yacob Yawan</u></strong> 
                                     </td>
                                 </tr>
