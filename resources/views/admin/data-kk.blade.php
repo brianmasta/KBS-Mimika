@@ -52,6 +52,7 @@
                                         <div class="btn-group-sm">
                                             <a class="btn btn-primary btn-sm" href="/detail-kk/{{$item->id}}">Detail</a>
                                             <a class="btn btn-warning btn-sm" href="/edit-kk/{{$item->id}}">Edit</a>
+                                            <a class="btn btn-info btn-sm" href="/cetak-kk/{{$item->id}}">Cetak</a>
                                             <a class="btn btn-danger btn-sm" href="/delete-keluarga/{{$item->id}}">Hapus</a>
                                         </div>
                                     </td>
