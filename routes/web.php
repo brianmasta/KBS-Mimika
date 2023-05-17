@@ -48,6 +48,7 @@ Route::put('/update-keluarga/{id}', [KeluargaController::class, 'update_keluarga
 Route::get('/delete-keluarga/{id}', [KeluargaController::class, 'delete_keluarga'])->middleware('auth');
 Route::delete('/destroy-keluarga/{id}', [KeluargaController::class, 'destroy_keluarga'])->middleware('auth');
 Route::get('/cetak-kk-pdf', [KeluargaController::class, 'cetak_data_kk'])->middleware('auth');
+Route::get('/cetak-kk/{id}', [KeluargaController::class, 'cetakkk'])->middleware('auth');
 
 // Anggota Keluarga
 Route::get('/input-anggota/{id}', [KeluargaController::class, 'input_anggota'])->middleware('auth');
