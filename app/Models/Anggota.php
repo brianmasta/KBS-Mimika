@@ -11,6 +11,7 @@ use App\Models\Keluarga;
 use App\Models\Pekerjaan;
 use App\Models\Pendidikan;
 use App\Models\Perkawinan;
+use Illuminate\Support\Carbon;
 use App\Models\Kewarganegaraan;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -79,6 +80,11 @@ class Anggota extends Model
     public function kelamin()
     {
         return $this->belongsTo(Kelamin::class);
+    }
+
+    public function getDateAttribute()
+    {
+        return Carbon::parse($this->attributes['date'])->translatedFormat('l, d F Y');
     }
 
 }

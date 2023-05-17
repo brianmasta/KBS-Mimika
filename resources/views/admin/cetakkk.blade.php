@@ -100,7 +100,7 @@
                                         <td>{{$item->nik}}</td>
                                         <td>{{$item->kelamin->name}}</td>
                                         <td>{{$item->tempat_lahir}}</td>
-                                        <td>{{$item->tanggal_lahir}}</td>
+                                        <td>{{ date('d-m-Y',strtotime($item->tanggal_lahir)) }}</td>
                                         <td>{{$item->agama->name}}</td>
                                         <td>{{$item->pendidikan->name}}</td>
                                         <td>{{$item->pekerjaan->name}}</td>
@@ -157,9 +157,6 @@
                                     <td>{{$anggota->created_at}}</td>
                                     <td><u>{{$anggota->name}}</u></td>
                                     <td>
-                                        <div class="container">
-
-                                        </div>
                                         <div class="col-md-4 container">{!! DNS2D::getBarcodeHTML("$anggota->id", 'QRCODE',6,6) !!}</div>
                                         <strong><u>Yacob Yawan</u></strong> 
                                     </td>
