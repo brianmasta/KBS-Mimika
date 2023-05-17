@@ -1,6 +1,6 @@
 @extends('admin.layouts.MainLayout')
 
-@section('title', 'Galeri')
+@section('title', 'Template Surat')
 
 @section('content')
     <div class="row">

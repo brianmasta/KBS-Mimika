@@ -514,7 +514,7 @@
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
               <div class="pic"><img src="assets/img/team/profil.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Toni Barangsno</h4>
+                <h4>Toni Baransano</h4>
                 <span>Bidang Keamanan</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
