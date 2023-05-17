@@ -32,7 +32,7 @@ class Keluarga extends Model
 
     public function anggotas()
     {
-        return $this->hasMany(Anggota::class, 'kk_id', 'id');
+        return $this->hasMany(Anggota::class, 'kk_id', 'id')->orderby('created_at');
     }
 
     public function rayon()
