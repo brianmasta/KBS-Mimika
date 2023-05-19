@@ -27,7 +27,9 @@ class Keluarga extends Model
         'kelurahan',
         'rt',
         'pos',
-        'hp'
+        'hp',
+        'status',
+        'keterangan',
     ];
 
     public function anggotas()

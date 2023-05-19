@@ -162,7 +162,7 @@ class KeluargaController extends Controller
         $keluarga = Keluarga::with(['rayon'])->findOrFail($id);
         $rayon = Rayon::where('id', '!=', $keluarga->rayon_id)->get(['id', 'name']);
 
-        return view('admin.edit-kk', ['keluarga' => $keluarga, 'rayon' => $rayon]);
+        return view('admin.edit-kk', ['keluarga' => $keluarga, 'rayon' => $rayon,]);
     }
 
     public function update_keluarga(Request $request, $id)
