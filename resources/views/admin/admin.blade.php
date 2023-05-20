@@ -95,15 +95,11 @@
         </div>
         <!-- [ Main Content ] end -->
 </div>
-    <!-- Required Js -->
+<!-- Required Js -->
     <script src="{{asset('assets-admin/js/vendor-all.min.js')}}"></script>
-    <script src="{{asset('assets-admin/js/plugins/bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets-admin/js/plugins/feather.min.js')}}"></script>
-    <script src="{{asset('assets-admin/js/pcoded.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="{{asset('assets-admin/js/plugins/clipboard.min.js')}}"></script>
-    <script src="{{asset('assets-admin/js/uikit.min.js')}}"></script>
-<!-- Apex Chart -->
+
+    <!-- Apex Chart -->
 <script src="{{asset('assets-admin/js/plugins/apexcharts.min.js')}}"></script>
 <script src="assets/js/plugins/apexcharts.min.js"></script>
 
