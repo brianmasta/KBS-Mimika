@@ -29,10 +29,10 @@ class AdminController extends Controller
         $total_rayon5 = Keluarga::Where('rayon_id', '5')->count();
 
         $Rayon1kk = Keluarga::Where('rayon_id', '1')->Where('status', '1')->count();
-        $Rayon2kk = Keluarga::Where('rayon_id', '2')->Where('status', '2')->count();
-        $Rayon3kk = Keluarga::Where('rayon_id', '3')->Where('status', '3')->count();
-        $Rayon4kk = Keluarga::Where('rayon_id', '4')->Where('status', '4')->count();
-        $Rayon5kk = Keluarga::Where('rayon_id', '5')->Where('status', '5')->count();
+        $Rayon2kk = Keluarga::Where('rayon_id', '2')->Where('status', '1')->count();
+        $Rayon3kk = Keluarga::Where('rayon_id', '3')->Where('status', '1')->count();
+        $Rayon4kk = Keluarga::Where('rayon_id', '4')->Where('status', '1')->count();
+        $Rayon5kk = Keluarga::Where('rayon_id', '5')->Where('status', '1')->count();
         return view('admin.admin',[
             'total_rayon' => $total_rayon,
             'total_rayon1' => $total_rayon1,
