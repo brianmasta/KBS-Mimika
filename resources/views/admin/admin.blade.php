@@ -177,12 +177,12 @@
                 plotOptions: {
                     bar: {
                         horizontal: false,
-                        columnWidth: '55%',
+                        columnWidth: '70%',
                         endingShape: 'rounded'
                     },
                 },
                 dataLabels: {
-                    enabled: false
+                    enabled: true,
                 },
                 colors: ["#0e9e4a", "#7267EF", "#EA4D4D"],
                 stroke: {
