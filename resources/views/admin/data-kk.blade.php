@@ -34,9 +34,9 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Kepala Keluarga</th>
-                                    <th>Alamat</th>
-                                    <th>Rayon</th>
-                                    <th>Asal Jemaat</th>
+                                    <th>No Rayon</th>
+                                    <th>No Hp</th>
+                                    <th>keterangan</th>
                                     <th>Opsi</th>
                                 </tr>
                             </thead>
@@ -45,9 +45,9 @@
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$item->name}}</td>
-                                    <td>{{$item->alamat}}</td>
                                     <td>{{$item->Rayon->name}}</td>
-                                    <td>{{$item->asal_jemaat}}</td>
+                                    <td>{{$item->hp}}</td>
+                                    <td>{{$item->keterangan}}</td>
                                     <td>
                                         <div class="btn-group-sm">
                                             <a class="btn btn-primary btn-sm" href="/detail-kk/{{$item->id}}">Detail</a>
