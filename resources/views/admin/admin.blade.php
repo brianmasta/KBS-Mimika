@@ -80,6 +80,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Presentasi Jumlah KK Masuk</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="bar-chart-kk-masuk"></div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
                 <div class="card">
@@ -91,6 +99,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- support-section end -->
         </div>
         <!-- [ Main Content ] end -->
@@ -157,6 +166,63 @@
                 );
                 chart.render();
             });
+
+            // Data KK Masuk
+            $(function() {
+            var options = {
+                chart: {
+                    height: 350,
+                    type: 'bar',
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        endingShape: 'rounded'
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                colors: ["#0e9e4a", "#7267EF", "#EA4D4D"],
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                series: [{
+                    name: 'Total KK',
+                    data: [{{ Js::from($total_rayon1) }}, {{ Js::from($total_rayon2) }}, {{ Js::from($total_rayon3) }}, {{ Js::from($total_rayon4) }}, {{ Js::from($total_rayon5) }}]
+                }, {
+                    name: 'Total KK Masuk',
+                    data: [{{ Js::from($Rayon1kk) }}, {{ Js::from($Rayon2kk) }}, {{ Js::from($Rayon3kk) }}, {{ Js::from($Rayon4kk) }}, {{ Js::from($Rayon5kk) }}]
+                }],
+                xaxis: {
+                    categories: ['Rayon 1', 'Rayon 2', 'Rayon 3', 'Rayon 4', 'Rayon 5'],
+                },
+                yaxis: {
+                    title: {
+                        text: 'Jumlah Keluarga'
+                    }
+                },
+                fill: {
+                    opacity: 1
+
+                },
+                tooltip: {
+                    y: {
+                        formatter: function(val) {
+                            return val + " Keluarga"
+                        }
+                    }
+                }
+            }
+            var chart = new ApexCharts(
+                document.querySelector("#bar-chart-kk-masuk"),
+                options
+            );
+            chart.render();
+        });
         }, 700);
     });
 </script>
