@@ -134,7 +134,7 @@
 							<div class=" dropdown-header">
 								<h6 class="text-overflow m-0">Welcome !</h6>
 							</div>
-							<a href="#!" class="dropdown-item">
+							{{-- <a href="#!" class="dropdown-item">
 								<i data-feather="user"></i>
 								<span>My Account</span>
 							</a>
@@ -149,7 +149,7 @@
 							<a href="#!" class="dropdown-item">
 								<i data-feather="lock"></i>
 								<span>Lock Screen</span>
-							</a>
+							</a> --}}
 							<a href="/logout" class="dropdown-item">
 								<i data-feather="power"></i>
 								<span>Logout</span>
@@ -172,11 +172,11 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Dashboard</h5>
+                            <h5 class="m-b-10"><a href="/admin">Dashboard</a> </h5>
                         </div>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                            <li class="breadcrumb-item">@yield('title')</li>
+                            <li class="breadcrumb-item">@yield('title')</li>								
+
                         </ul>
                     </div>
                 </div>
