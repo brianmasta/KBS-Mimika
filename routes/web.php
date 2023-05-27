@@ -8,6 +8,7 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\IbadahController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\KeluargaController;
+use App\Http\Controllers\StrukturalController;
 use App\Http\Controllers\TamplatesuratController;
 
 /*
@@ -73,6 +74,7 @@ Route::put('/update-ibadah/{id}', [IbadahController::class, 'update_ibadah'])->m
 Route::get('/delete-ibadah/{id}', [IbadahController::class, 'delete_ibadah'])->middleware('auth');
 Route::delete('/destroy-ibadah/{id}', [IbadahController::class, 'destroy_ibadah'])->middleware('auth');
 
+// Galeri
 Route::get('/data-galeri', [GaleriController::class, 'data'])->middleware('auth');
 Route::get('/input-galeri', [GaleriController::class, 'input'])->middleware('auth');
 Route::post('/galeri-add', [GaleriController::class, 'create_galeri'])->middleware('auth');
@@ -81,8 +83,18 @@ Route::put('/update-galeri/{id}', [GaleriController::class, 'update_galeri'])->m
 Route::get('/delete-galeri/{id}', [GaleriController::class, 'delete_galeri'])->middleware('auth');
 Route::delete('/destroy-galeri/{id}', [GaleriController::class, 'destroy_galeri'])->middleware('auth');
 
+// tamplate Surat
 Route::get('/data-tamplate-surat', [TamplatesuratController::class, 'data'])->middleware('auth');
 Route::get('/input-tamplate-surat', [TamplatesuratController::class, 'input'])->middleware('auth');
 Route::post('/tamplate-surat-add', [TamplatesuratController::class, 'create_tamplate_surat'])->middleware('auth');
 Route::get('/delete-tamplate-surat/{id}', [TamplatesuratController::class, 'delete_tamplate_surat'])->middleware('auth');
 Route::delete('/destroy-tamplate-surat/{id}', [TamplatesuratController::class, 'destroy_tamplate_surat'])->middleware('auth');
+
+// Struktural
+Route::get('/data-struktural', [StrukturalController::class, 'data'])->middleware('auth');
+Route::get('/input-struktural', [StrukturalController::class, 'input'])->middleware('auth');
+Route::post('/struktural-add', [StrukturalController::class, 'create_struktural'])->middleware('auth');
+Route::get('/edit-struktural/{id}', [StrukturalController::class, 'edit_struktural'])->middleware('auth');
+Route::put('/update-struktural/{id}', [StrukturalController::class, 'update_struktural'])->middleware('auth');
+Route::get('/delete-struktural/{id}', [StrukturalController::class, 'delete_struktural'])->middleware('auth');
+Route::delete('/destroy-struktural/{id}', [StrukturalController::class, 'destroy_struktural'])->middleware('auth');
