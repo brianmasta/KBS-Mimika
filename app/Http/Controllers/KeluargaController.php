@@ -16,6 +16,7 @@ use App\Models\Perkawinan;
 use Illuminate\Http\Request;
 use App\Models\Kewarganegaraan;
 use Illuminate\Support\Facades\Session;
+// use PDF;
 
 class KeluargaController extends Controller
 {
@@ -161,7 +162,7 @@ class KeluargaController extends Controller
         $keluarga = Keluarga::with(['rayon'])->findOrFail($id);
         $rayon = Rayon::where('id', '!=', $keluarga->rayon_id)->get(['id', 'name']);
 
-        return view('admin.edit-kk', ['keluarga' => $keluarga, 'rayon' => $rayon]);
+        return view('admin.edit-kk', ['keluarga' => $keluarga, 'rayon' => $rayon,]);
     }
 
     public function update_keluarga(Request $request, $id)
@@ -196,5 +197,30 @@ class KeluargaController extends Controller
         }
 
         return redirect('detail-kk/'. $anggota->kk_id);
+    }
+
+    public function cetak_data_kk()
+    {
+        $keluarga = Keluarga::with('anggotas')->get();
+        // $anggota = Anggota::all();
+
+        // $pdf = pdf::loadView('admin.cetak-kk-pdf', ['keluarga' => $keluarga]);
+        // return $pdf->stream('Data_Keluarga_KBS.pdf');
+        // dd($keluarga);
+        return View('admin.cetak-kk-pdf', ['keluarga' => $keluarga]);
+    }
+
+    public function cetakkk($id)
+    {
+        $anggota = Keluarga::with(['anggotas'])->findOrFail($id);
+        
+        // dd($anggota);
+        return view('admin.cetakkk', ['anggota' => $anggota]);
+
+        // view()->share('anggota', $anggota);
+        // $pdf = PDF::loadView('admin.cetakkk')->setPaper('a4', 'landscape');
+
+        // return $pdf->stream();
+
     }
 }

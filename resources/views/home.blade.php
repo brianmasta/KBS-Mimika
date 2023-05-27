@@ -300,16 +300,17 @@
         </div>
 
         <div class="row g-0" data-aos="fade-left">
-
+          @foreach ($galeri as $item)
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              <a href="{{ asset('assets/img/gallery/1.jpeg') }}" class="gallery-lightbox">
-                <img src="{{ asset('assets/img/gallery/1.jpeg') }}" alt="" class="img-fluid">
+              <a href="{{asset('storage/galeri/'.$item->gambar)}}" class="gallery-lightbox">
+                <img src="{{asset('storage/galeri/'.$item->gambar)}}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
+          @endforeach
 
-          <div class="col-lg-3 col-md-4">
+          {{-- <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
               <a href="{{ asset('assets/img/gallery/2.jpeg') }}" class="gallery-lightbox">
                 <img src="{{ asset('assets/img/gallery/2.jpeg') }}" alt="" class="img-fluid">
@@ -347,7 +348,7 @@
                 <img src="{{ asset('assets/img/gallery/6 KBS.jpg') }}" alt="" class="img-fluid">
               </a>
             </div>
-          </div>
+          </div> --}}
 
         </div>
 
@@ -364,24 +365,26 @@
         </div>
 
         <div class="row" data-aos="fade-left">
-
-          <div class="col-lg-3 col-md-6">
+          @foreach ($struktural as $item)
+          <div class="col-lg-3 col-md-6 mt-md-2">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/profil.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{asset('storage/struktural/'.$item->foto)}}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Yacob Yawan</h4>
-                <span>Ketua</span>
-                <div class="social">
+                <h4>{{ $item->name}}</h4>
+                <span>{{ $item->jabatan}}</span>
+                {{-- <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          @endforeach
+
+          {{-- <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
               <div class="pic"><img src="assets/img/team/profil.png" class="img-fluid" alt=""></div>
               <div class="member-info">
@@ -513,7 +516,7 @@
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
               <div class="pic"><img src="assets/img/team/profil.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Toni Barangsno</h4>
+                <h4>Toni Baransano</h4>
                 <span>Bidang Keamanan</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
@@ -523,7 +526,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
 
         </div>
 

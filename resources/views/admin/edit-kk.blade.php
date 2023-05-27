@@ -75,6 +75,21 @@
                                     <input value="{{ $keluarga->hp }}" name="hp" type="number" class="form-control" id="hp" placeholder="Nomor HP"required>
                                     <small id="emailHelp" class="form-text text-muted">No HP yang masih aktif.</small>
                                 </div>
+                                <hr>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="status" id="in-progress" value="" @if ($keluarga->status == "") checked @endif>
+                                        <label class="form-check-label" for="in-progress">In Progress</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="status" id="completed" value="1" @if ($keluarga->status == 1) checked @endif>
+                                        <label class="form-check-label" for="completed">Completed</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="keterangan">Keterangan</label>
+                                    <textarea name="keterangan" class="form-control" id="keterangan" rows="3">{{ $keluarga->keterangan }}</textarea>
+                                </div>
                                 <button type="submit" class="btn  btn-primary">Submit</button>
                                 <a class="btn  btn-danger"href="/data-kk">Batal</a>
                             </form>

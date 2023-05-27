@@ -12,6 +12,7 @@
                 <div class="card-body">
                     <div class="mb-3">
                         <a class="btn btn-success" href="/input-kk">Tambah</a>
+                        <a class="btn btn-success" href="/cetak-kk-pdf">PDF</a>
                     </div>
                     <form action="" method="get">
                         <div class="input-group mb-3">
@@ -33,9 +34,9 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Kepala Keluarga</th>
-                                    <th>Alamat</th>
-                                    <th>Rayon</th>
-                                    <th>Asal Jemaat</th>
+                                    <th>No Rayon</th>
+                                    <th>No Hp</th>
+                                    <th>keterangan</th>
                                     <th>Opsi</th>
                                 </tr>
                             </thead>
@@ -44,13 +45,14 @@
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$item->name}}</td>
-                                    <td>{{$item->alamat}}</td>
                                     <td>{{$item->Rayon->name}}</td>
-                                    <td>{{$item->asal_jemaat}}</td>
+                                    <td>{{$item->hp}}</td>
+                                    <td>{{$item->keterangan}}</td>
                                     <td>
                                         <div class="btn-group-sm">
                                             <a class="btn btn-primary btn-sm" href="/detail-kk/{{$item->id}}">Detail</a>
                                             <a class="btn btn-warning btn-sm" href="/edit-kk/{{$item->id}}">Edit</a>
+                                            <a class="btn btn-info btn-sm" href="/cetak-kk/{{$item->id}}">Cetak</a>
                                             <a class="btn btn-danger btn-sm" href="/delete-keluarga/{{$item->id}}">Hapus</a>
                                         </div>
                                     </td>

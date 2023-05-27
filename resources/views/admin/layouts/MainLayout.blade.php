@@ -88,6 +88,14 @@
 						<a href="#!" class="pc-link "><span class="pc-micon"><i data-feather="box"></i></span><span class="pc-mtext">Pengumuman</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
 						<ul class="pc-submenu">
 							<li class="pc-item"><a class="pc-link" href="/data-ibadah">Jadwal Ibadah</a></li>
+							<li class="pc-item"><a class="pc-link" href="/data-galeri">Galeri</a></li>
+							<li class="pc-item"><a class="pc-link" href="/data-struktural">Struktural</a></li>
+						</ul>
+					</li>
+					<li class="pc-item pc-hasmenu">
+						<a href="#!" class="pc-link "><span class="pc-micon"><i data-feather="box"></i></span><span class="pc-mtext">Surat</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+						<ul class="pc-submenu">
+							<li class="pc-item"><a class="pc-link" href="/data-tamplate-surat">Tamplate Surat</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -127,7 +135,7 @@
 							<div class=" dropdown-header">
 								<h6 class="text-overflow m-0">Welcome !</h6>
 							</div>
-							<a href="#!" class="dropdown-item">
+							{{-- <a href="#!" class="dropdown-item">
 								<i data-feather="user"></i>
 								<span>My Account</span>
 							</a>
@@ -142,7 +150,7 @@
 							<a href="#!" class="dropdown-item">
 								<i data-feather="lock"></i>
 								<span>Lock Screen</span>
-							</a>
+							</a> --}}
 							<a href="/logout" class="dropdown-item">
 								<i data-feather="power"></i>
 								<span>Logout</span>
@@ -165,11 +173,11 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Dashboard</h5>
+                            <h5 class="m-b-10"><a href="/admin">Dashboard</a> </h5>
                         </div>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                            <li class="breadcrumb-item">@yield('title')</li>
+                            <li class="breadcrumb-item">@yield('title')</li>								
+
                         </ul>
                     </div>
                 </div>
@@ -181,54 +189,6 @@
 	
 </div>
 
-<!-- [ Main Content ] end -->
-
-        <!-- Warning Section start -->
-    <!-- Older IE warning message -->
-    <!--[if lt IE 11]>
-        <div class="ie-warning">
-            <h1>Warning!!</h1>
-            <p>You are using an outdated version of Internet Explorer, please upgrade
-               <br/>to any of the following web browsers to access this website.
-            </p>
-            <div class="iew-container">
-                <ul class="iew-download">
-                    <li>
-                        <a href="http://www.google.com/chrome/">
-                            <img src="assets-admin/images/browser/chrome.png" alt="Chrome">
-                            <div>Chrome</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.mozilla.org/en-US/firefox/new/">
-                            <img src="assets-admin/images/browser/firefox.png" alt="Firefox">
-                            <div>Firefox</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.opera.com">
-                            <img src="assets-admin/images/browser/opera.png" alt="Opera">
-                            <div>Opera</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.apple.com/safari/">
-                            <img src="assets-admin/images/browser/safari.png" alt="Safari">
-                            <div>Safari</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                            <img src="assets-admin/images/browser/ie.png" alt="">
-                            <div>IE (11 & above)</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <p>Sorry for the inconvenience!</p>
-        </div>
-    <![endif]-->
-    <!-- Warning Section Ends -->
     <!-- Required Js -->
     <script src="{{asset('assets-admin/js/vendor-all.min.js')}}"></script>
     <script src="{{asset('assets-admin/js/plugins/bootstrap.min.js')}}"></script>
@@ -237,15 +197,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="{{asset('assets-admin/js/plugins/clipboard.min.js')}}"></script>
     <script src="{{asset('assets-admin/js/uikit.min.js')}}"></script>
-
 <!-- Apex Chart -->
 <script src="{{asset('assets-admin/js/plugins/apexcharts.min.js')}}"></script>
+<script src="assets/js/plugins/apexcharts.min.js"></script>
+
+
+
+{{-- <script src="assets/js/pages/chart-apex.js"></script> --}}
 {{-- <script>
     $("body").append('<div class="fixed-button active"><a href="https://1.envato.market/VGznk" target="_blank" class="btn btn-md btn-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Upgrade To Pro</a> </div>');
 </script> --}}
 
-<!-- custom-chart js -->
-<script src="{{asset('assets-admin/js/pages/dashboard-sale.js')}}"></script>
+
+
+
 </body>
 
 </html>

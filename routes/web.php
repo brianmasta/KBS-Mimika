@@ -4,9 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\IbadahController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\KeluargaController;
+use App\Http\Controllers\StrukturalController;
+use App\Http\Controllers\TamplatesuratController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +25,17 @@ use App\Http\Controllers\KeluargaController;
 // Route::get('/', function () {
 //     return view('home');
 // });
+Route::get('/storage-link', function(){
+    $targetForlder = storage_path('app/public');
+    $linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage';
+    symlink($targetForlder,$linkFolder);
+});
+
+Route::get('/storage-link', function(){
+    $targetForlder = storage_path('app/public');
+    $linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage';
+    symlink($targetForlder,$linkFolder);
+});
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -39,6 +53,8 @@ Route::get('/edit-kk/{id}', [KeluargaController::class, 'edit_kk'])->middleware(
 Route::put('/update-keluarga/{id}', [KeluargaController::class, 'update_keluarga'])->middleware('auth');
 Route::get('/delete-keluarga/{id}', [KeluargaController::class, 'delete_keluarga'])->middleware('auth');
 Route::delete('/destroy-keluarga/{id}', [KeluargaController::class, 'destroy_keluarga'])->middleware('auth');
+Route::get('/cetak-kk-pdf', [KeluargaController::class, 'cetak_data_kk'])->middleware('auth');
+Route::get('/cetak-kk/{id}', [KeluargaController::class, 'cetakkk'])->middleware('auth');
 
 // Anggota Keluarga
 Route::get('/input-anggota/{id}', [KeluargaController::class, 'input_anggota'])->middleware('auth');
@@ -48,6 +64,7 @@ Route::put('/update-anggota/{id}', [KeluargaController::class, 'update_anggota']
 Route::get('/delete-anggota/{id}', [KeluargaController::class, 'delete_anggota'])->middleware('auth');
 Route::delete('/destroy-anggota/{id}', [KeluargaController::class, 'destroy_anggota'])->middleware('auth');
 
+
 // Jadwal Ibadah
 Route::get('/data-ibadah', [IbadahController::class, 'data'])->middleware('auth');
 Route::get('/input-ibadah', [IbadahController::class, 'input'])->middleware('auth');
@@ -56,3 +73,28 @@ Route::get('/edit-ibadah/{id}', [IbadahController::class, 'edit_ibadah'])->middl
 Route::put('/update-ibadah/{id}', [IbadahController::class, 'update_ibadah'])->middleware('auth');
 Route::get('/delete-ibadah/{id}', [IbadahController::class, 'delete_ibadah'])->middleware('auth');
 Route::delete('/destroy-ibadah/{id}', [IbadahController::class, 'destroy_ibadah'])->middleware('auth');
+
+// Galeri
+Route::get('/data-galeri', [GaleriController::class, 'data'])->middleware('auth');
+Route::get('/input-galeri', [GaleriController::class, 'input'])->middleware('auth');
+Route::post('/galeri-add', [GaleriController::class, 'create_galeri'])->middleware('auth');
+Route::get('/edit-galeri/{id}', [GaleriController::class, 'edit_galeri'])->middleware('auth');
+Route::put('/update-galeri/{id}', [GaleriController::class, 'update_galeri'])->middleware('auth');
+Route::get('/delete-galeri/{id}', [GaleriController::class, 'delete_galeri'])->middleware('auth');
+Route::delete('/destroy-galeri/{id}', [GaleriController::class, 'destroy_galeri'])->middleware('auth');
+
+// tamplate Surat
+Route::get('/data-tamplate-surat', [TamplatesuratController::class, 'data'])->middleware('auth');
+Route::get('/input-tamplate-surat', [TamplatesuratController::class, 'input'])->middleware('auth');
+Route::post('/tamplate-surat-add', [TamplatesuratController::class, 'create_tamplate_surat'])->middleware('auth');
+Route::get('/delete-tamplate-surat/{id}', [TamplatesuratController::class, 'delete_tamplate_surat'])->middleware('auth');
+Route::delete('/destroy-tamplate-surat/{id}', [TamplatesuratController::class, 'destroy_tamplate_surat'])->middleware('auth');
+
+// Struktural
+Route::get('/data-struktural', [StrukturalController::class, 'data'])->middleware('auth');
+Route::get('/input-struktural', [StrukturalController::class, 'input'])->middleware('auth');
+Route::post('/struktural-add', [StrukturalController::class, 'create_struktural'])->middleware('auth');
+Route::get('/edit-struktural/{id}', [StrukturalController::class, 'edit_struktural'])->middleware('auth');
+Route::put('/update-struktural/{id}', [StrukturalController::class, 'update_struktural'])->middleware('auth');
+Route::get('/delete-struktural/{id}', [StrukturalController::class, 'delete_struktural'])->middleware('auth');
+Route::delete('/destroy-struktural/{id}', [StrukturalController::class, 'destroy_struktural'])->middleware('auth');
