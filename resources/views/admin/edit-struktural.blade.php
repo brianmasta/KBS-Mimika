@@ -18,7 +18,12 @@
                                 <div class="form-group">
                                     <label for="nama">Judul</label>
                                     <input name="name" type="text" class="form-control" id="nama" placeholder="judul" value="{{$struktural->name}}" required>
-                                    <small id="nama" class="form-text text-muted">Ubah judul foto.</small>
+                                    {{-- <small id="nama" class="form-text text-muted">Ubah judul foto.</small> --}}
+                                </div>
+                                <div class="form-group">
+                                    <label for="jabatan">Judul</label>
+                                    <input name="jabatan" type="text" class="form-control" id="jabatan" placeholder="judul" value="{{$struktural->jabatan}}" required>
+                                    {{-- <small id="jabatan" class="form-text text-muted">Ubah judul foto.</small> --}}
                                 </div>
                                 <img class="img-thumbnail" src="{{asset('storage/struktural/'.$struktural->foto)}}" alt="" width="500px">
                                 <div class="input-group cust-file-button">
